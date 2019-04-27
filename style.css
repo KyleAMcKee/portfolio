@@ -1,3 +1,38 @@
 body {
-    background-color: green
+    background-color: whitesmoke;
+    margin: 0 auto;
+}
+
+.skill-wrapper {
+    background-color: gray;
+    max-width: 1335px;
+    margin: 0 auto;
+}
+
+.grid-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    background-color: lightslategray;
+}
+
+.grid-box {
+    background-color: #444;
+    color: #fff;
+    height: 30vh;
+    flex-basis: 20%;
+    -ms-flex: auto;
+    width: 259px;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 2.5%;
+}
+
+.img-container > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
 }
