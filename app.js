@@ -1,77 +1,31 @@
 const header = () => {
     return `<header>
-                <nav class="menu">
-                    <ul>
-                        <li id="home">Home</li>
-                        <li id="projects">Projects</li>
-                        <li id="skills">Skills</li>
-                        <li id="resume">Resume</li>
-                    </ul>
-                </nav>
+                <div class="header-container">
+                    <nav class="menu">
+                        <h1 class="name">Kyle M<span>c</span>Kee</h1>
+                        <ul>
+                            <li id="home">Home</li>
+                            <li id="projects">Projects</li>
+                            <li id="skills">Skills</li>
+                            <li id="resume">Resume</li>
+                        </ul>
+                    </nav>
+                </div>
             </header>`
 }
 
 const footer = () => {
-    return `<footer>This is at the bottom</footer>`
+    return `<footer>
+                <div class=footer-container>
+                    <h2>&copy; 2019 Kyle McKee</h2>
+                </div>
+            </footer>`
 }
 
 const mainPage = () => {
-    return `<div class=page-content>
+    return `<div class="page-content">
                 ${home()}
             </div>`
-}
-
-const renderSkill = (skill) => {
-    return `<div class=grid-box>
-                <div class=img-container>
-                    <img src="public/${skill}.png">
-                </div>
-                <p>${skill}</p>
-            </div>`
-}
-
-const devOps = () => {
-    let devOps = ['Github', 'Git', 'Webpack', 'Vim'];
-    return `<div class=skill-wrapper>
-                <h2>Dev Ops</h2>
-                <div class=grid-wrapper>
-                    ${devOps.map(technology => renderSkill(technology)).join('')}
-                </div>
-            </div>`
-}
-
-const web = () => {
-    let web = ['HTML5', 'CSS3', 'NodeJS', 'React'];
-    return `<div class=skill-wrapper>
-                <h2>Web</h2>
-                <div class=grid-wrapper>
-                    ${web.map(technology => renderSkill(technology)).join('')}
-                </div>
-            </div>`
-}
-
-const languages = () => {
-    let languages = ['C', 'C++', 'Python', 'Javascript'];
-    return `<div class=skill-wrapper>
-                <h2>Languages</h2>
-                <div class=grid-wrapper>
-                    ${languages.map(language => renderSkill(language)).join('')}
-                </div>
-            </div>`
-}
-
-const database = () => {
-    let database = ['PostgreSQL', 'MongoDB', 'MySQL'];
-    return `<div class=skill-wrapper>
-                <h2>Database</h2>
-                <div class=grid-wrapper>
-                    ${database.map(technology => renderSkill(technology)).join('')}
-                </div>
-            </div>`
-}
-
-const renderProjects = () => {
-    
 }
 
 const home = () => {
@@ -123,3 +77,5 @@ const renderPage = () => {
 
 document.querySelector('body').innerHTML = renderPage();
 setEventListeners();
+
+//https://codepen.io/anon/pen/rbRNgm
