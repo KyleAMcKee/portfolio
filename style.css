@@ -13,10 +13,10 @@ html {
     font-family: "Roboto Cn", sans-serif;
 }
 
-a {
+/* a {
     text-decoration: none;
     color: #eee;
-}
+} */
 
 .page-content {
     margin: 5rem;
@@ -145,25 +145,58 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    display: table-cell; 
+    vertical-align: middle;
+    height: 50px;
 }
 
 .footer-container {
     color: white;
+
     text-align: center;
+    vertical-align: middle;
+    line-height: 50px;   
 }
 
 /*                *    
  * --- SKILLS --- * 
  *                */
 
+
+ .skill-container {
+     border: solid 1px white;
+     border-radius: 5px;
+     background-color: white;
+     margin: 1rem;
+ }
+
 .title {
     color:whitesmoke;
-    text-align: left;
-    margin: 1rem;
     height: 40px;
     font-size: 25px;
     font-weight: 300;
+    text-align: left;
+    display: table-cell;
+    padding-left: 10px;
+    padding-top: 10px;
 }
+
+.collapse {
+    color:whitesmoke;
+    height: 40px;
+    font-size: 25px;
+    font-weight: 300;
+    text-align: right;
+    display: table-cell;
+    cursor: pointer;
+}
+
+h2 {
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+
 
 .skill-name {
     text-align: center;
@@ -173,7 +206,7 @@ footer {
 .skill-wrapper {
     background-color: #15BC9B;
     max-width: 1335px;
-    margin: 0 auto;
+    margin: 2vh auto;
     border-radius: 5px;
 }
 
@@ -182,6 +215,8 @@ footer {
     flex-flow: row wrap;
     justify-content: flex-start;
     background-color: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .grid-box {
@@ -198,68 +233,16 @@ footer {
 
 .img-container > img {
     display: block;
+    margin-top: 2vh;
     margin-left: auto;
     margin-right: auto;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
 
 /*                  *    
  * --- PROJECTS --- * 
  *                  */
-
- .project-wrapper {
-    max-width: 1335px;
-    margin: 0 auto;
- }
-
- .project-grid-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
- }
-
- .project-grid-item {
-    height: 550px;
-    flex-basis: 20%;
-    -ms-flex: auto;
-    width: 259px;
-    position: relative;
-    padding: 10px;
-    box-sizing: border-box;
- }
-
- .project-grid-wrapper {
-    -webkit-box-sizing: initial;
-    -moz-box-sizing: initial;
-    box-sizing: initial;
-    background: #ececec;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    -webkit-transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
-    transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
-    position: relative;
- }
-
- .project-grid-item-container {
-    height: 100%;
-    width: 100%;
-    position: relative;
- }
-
- .project-grid-image-container {
-    height: 45%;
-    width: 120%;
-    background-size: cover;
-    position: relative;
-    background-position: 50% 50%;
-    left: -10.5%;
-    top: -4.5%;
- }
-
-  /* TESETTETSDF */
 
   .container {
     max-width: 1335px;
@@ -273,7 +256,7 @@ footer {
   }
 
   .grid-item {
-    height: 550px;
+    height: auto;
     flex-basis: 20%;
     -ms-flex: auto;
     width: 259px;
@@ -305,8 +288,9 @@ footer {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    -webkit-transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
-    transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     position: relative;
   }
   
@@ -315,16 +299,6 @@ footer {
     width: 100%;
     position: relative;
   }
-
-  /* .grid-image-top {
-    height: 45%;
-    width: 120%;
-    background-size: cover;
-    position: relative;
-    background-position: 50% 50%;
-    left: -10.5%;
-    top: -4.5%;
-  } */
 
   .grid-image-top img {
     max-width: 100%;
@@ -355,6 +329,12 @@ footer {
     margin-bottom: 20px;
     display: block;
     font-size: 14px;
+    height: 8vh;
+  }
+
+  .item-tech {
+      font-weight: 700;
+      font-size: 12px;
   }
   
   .more-info {
@@ -382,8 +362,23 @@ footer {
   }
   
   .grid-item:hover .grid-item-wrapper {
-    padding: 2% 2%;
-    margin: -2% -2%;
+    -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .grid-item:hover::after .grid-item-wrapper {
+    opacity: 1;
+  }
+
+  .grid-item:hover .skill-container {
+    -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .grid-item:hover::after .skill-container {
+    opacity: 1;
   }
   
   @media(max-width: 1333px) {
@@ -409,3 +404,99 @@ footer {
       flex-basis: 100%;
     }
   }
+
+/*                *    
+ * --- RESUME --- * 
+ *                */
+
+.button-container {
+    text-align: center;
+    margin: 2vh;
+}
+
+.button {
+    color: #494949 ;
+    text-transform: uppercase;
+    background: #ffffff;
+    padding: 15px;
+    border: 4px solid #2B3E50;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.button:hover {
+    color: #ffffff;
+    background: #15BC9B;
+    border-color: #15BC9B;
+    transition: all 0.4s ease 0s;
+}
+
+/*                  *    
+ * --- TERMINAL --- * 
+ *                  */
+
+ #terminal {
+	font-family: courier, monospace;
+    color: #fff;
+    background-color: black;
+	max-width:750px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:200px;
+    font-size:14px;
+    height: 35vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 5px;
+}
+
+#terminal-input {
+    display:table-cell; 
+    width:100%;
+    border: none;
+    background: black;
+    color: white;
+    outline: none;
+    font-family: courier, monospace;
+    color: #fff;
+    font-size:14px;
+}
+
+#terminal-user {
+    display:table-cell; 
+    width:1px;
+    padding-right: 8px;
+}
+
+#terminal-line{
+    display: table;
+    width: 100%;
+}
+
+.history-item {
+    display: block;
+}
+
+.file {
+    padding-right: 25px;
+}
+
+.help-text {
+    color: #20C20E;
+    padding-right: 25px;
+}
+
+.social a {
+    color: #2A6FD8;
+    text-decoration: none;
+    padding-right: 25px;
+}
+
+#terminal-help {
+    text-align: center;
+    margin: 2vh;
+}
+
+input {
+    caret-color: #20C20E;
+}

@@ -24,34 +24,31 @@ const footer = () => {
 
 const mainPage = () => {
     return `<div class="page-content">
-                ${home()}
-            </div>`
-}
-
-const home = () => {
-    return `<div>
-                <h2>You are Home</h2>
+                ${terminal()}
             </div>`
 }
 
 const skills = () => {
     return `<div class="skills">
                 ${languages()}
-                ${web()}
-                ${database()}
-                ${devOps()}
+                ${technologies()}
             </div>`
 }
 
 const projects = () => { 
-    return `<div class="projects>
+    return `<div class="projects">
                 ${renderProjects()}
             </div>`
 }
 
 const resume = () => {
     return `<div>
-                <h2>Resume</h2>
+                <object data="public/Kyle_McKee_Resume.pdf" type="application/pdf" width="100%" height="800px">
+                    <p>It appears you don't have a PDF plugin for this browser. You can use the download button instead</p>
+                </object>
+                <div class="button-container">
+                    <a class="button" href="public/Kyle_McKee_Resume.pdf">Download</a>
+                </div>    
             </div>`
 }
 
@@ -60,10 +57,11 @@ const renderSelection = (selection) => {
 }
 
 const setEventListeners = () => {
-    document.querySelector('#home').addEventListener('click', () => renderSelection(home));
+    document.querySelector('#home').addEventListener('click', () => renderSelection(terminal));
     document.querySelector('#projects').addEventListener('click', () => renderSelection(projects));
     document.querySelector('#skills').addEventListener('click', () => renderSelection(skills));
     document.querySelector('#resume').addEventListener('click', () => renderSelection(resume));
+    document.querySelector('#terminal-input').addEventListener('keyup', updateTerminal);
 }
 
 const renderPage = () => {
