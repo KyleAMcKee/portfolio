@@ -13,10 +13,9 @@ html {
     font-family: "Roboto Cn", sans-serif;
 }
 
-/* a {
+a {
     text-decoration: none;
-    color: #eee;
-} */
+}
 
 .page-content {
     margin: 5rem;
@@ -303,7 +302,7 @@ h2 {
   .grid-image-top img {
     max-width: 100%;
     display: flex;
-    min-height: 200px;
+    min-height: 175px;
   }
   
   .grid-item-content {
@@ -327,7 +326,7 @@ h2 {
   
   .item-excerpt {
     margin-bottom: 20px;
-    display: block;
+    display: inline-block;
     font-size: 14px;
     height: 8vh;
   }
