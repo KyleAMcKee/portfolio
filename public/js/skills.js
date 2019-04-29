@@ -2,7 +2,7 @@ const renderSkill = (skill) => {
     return `<div class="grid-item">
                 <div class="skill-container">
                     <div class="img-container">
-                        <img src="public/${skill}.png">
+                        <img src="../skills/${skill}.png">
                     </div>
                     <div class="skill-name">
                         <p>${skill}</p>
@@ -13,7 +13,7 @@ const renderSkill = (skill) => {
 
 
 const technologies = () => {
-    let technologies = ['HTML5', 'CSS3', 'NodeJS', 'React', 'Github', 'Git', 'Webpack', 'Vim','PostgreSQL', 'MongoDB', 'MySQL', 'Postman', 'jQuery'];
+    let technologies = ['HTML5', 'CSS3', 'NodeJS', 'React', 'Github', 'Git', 'Webpack', 'Vim','PostgreSQL', 'MongoDB', 'MySQL', 'Postman', 'jQuery', 'Firebase'];
     return `<div class=skill-wrapper>
                 <h2 class="title">Technologies / Frameworks</h2>
                 <div class=grid-wrapper id="technologies">
